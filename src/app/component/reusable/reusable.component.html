@@ -1,0 +1,41 @@
+<ion-menu contentId="main-content" [menuId]="menuId">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title> <ion-icon name="folder-outline"></ion-icon> Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding"><ion-list>
+    <ion-item>
+      <a routerLink="../../home.page.html">
+        <ion-label><ion-icon name="documents-outline"></ion-icon> All Notes </ion-label>
+      </a>
+    </ion-item>
+    <ion-item>
+      <a routerLink="../../app-setting">
+        <ion-label><ion-icon name="folder-outline"></ion-icon> Manage Folder</ion-label>
+      </a>
+    </ion-item>
+    <ion-item>
+      <a routerLink="../../account">
+        <ion-label><ion-icon name="trash-outline"></ion-icon> Trash </ion-label>
+      </a>
+    </ion-item>
+    <ion-item>
+      <a routerLink="../../blank">
+        <ion-label><ion-icon name="settings-outline"></ion-icon> Settings</ion-label>
+      </a>
+    </ion-item>
+  </ion-list></ion-content>
+</ion-menu>
+
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button [menu]="menuId"></ion-menu-button>
+      </ion-buttons>
+      <ion-title>{{menuId}}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding"> <ion-icon name="caret-down-outline"></ion-icon>  Date Modified</ion-content>
+</div>
